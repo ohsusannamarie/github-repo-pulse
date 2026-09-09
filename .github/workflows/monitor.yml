@@ -1,0 +1,53 @@
+name: GitHub Repo Pulse
+
+on:
+  schedule:
+    - cron: "0 11 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: github-repo-pulse
+  cancel-in-progress: false
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run engagement monitor
+        env:
+          GITHUB_USERNAME: ${{ vars.GITHUB_USERNAME || github.repository_owner }}
+          MONITOR_GITHUB_TOKEN: ${{ secrets.MONITOR_GITHUB_TOKEN }}
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          ALERT_EMAIL: ${{ secrets.ALERT_EMAIL }}
+          FROM_EMAIL: ${{ secrets.FROM_EMAIL }}
+          SEND_QUIET_DIGEST: ${{ vars.SEND_QUIET_DIGEST || 'true' }}
+          DIGEST_TITLE: ${{ vars.DIGEST_TITLE || 'GitHub Repo Pulse' }}
+        run: python monitor.py
+
+      - name: Save latest state
+        run: |
+          if git diff --quiet -- data/state.json; then
+            echo "No state changes to commit."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/state.json
+          git commit -m "Update engagement state"
+          git pull --rebase origin "${GITHUB_REF_NAME}"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
