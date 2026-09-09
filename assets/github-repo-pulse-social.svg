@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0d1117"/>
+      <stop offset="1" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="pulse" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#58a6ff"/>
+      <stop offset="1" stop-color="#a371f7"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#000" flood-opacity="0.38"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="1110" cy="80" r="170" fill="#1f6feb" opacity="0.08"/>
+  <circle cx="1030" cy="560" r="220" fill="#8957e5" opacity="0.08"/>
+
+  <g font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif">
+    <text x="64" y="72" fill="#8b949e" font-size="16" font-weight="700" letter-spacing="6">OPEN SOURCE</text>
+    <text x="64" y="165" fill="#f0f6fc" font-size="72" font-weight="800">GitHub</text>
+    <text x="64" y="238" fill="url(#pulse)" font-size="72" font-weight="800">Repo Pulse</text>
+    <text x="64" y="296" fill="#c9d1d9" font-size="25">Daily email digests for followers, stars,</text>
+    <text x="64" y="332" fill="#c9d1d9" font-size="25">forks, watchers, and repository growth.</text>
+    <text x="64" y="377" fill="#8b949e" font-size="15" font-weight="700" letter-spacing="3">BUILT BY SUSANNA CONWAY</text>
+
+    <g transform="translate(64 422)">
+      <rect width="170" height="58" rx="16" fill="#161b22" stroke="#30363d"/>
+      <text x="22" y="36" fill="#c9d1d9" font-size="18" font-weight="700">⚙ GitHub Actions</text>
+      <rect x="188" width="126" height="58" rx="16" fill="#161b22" stroke="#30363d"/>
+      <text x="210" y="36" fill="#c9d1d9" font-size="18" font-weight="700">Python</text>
+      <rect x="332" width="156" height="58" rx="16" fill="#161b22" stroke="#30363d"/>
+      <text x="354" y="36" fill="#c9d1d9" font-size="18" font-weight="700">Email Digests</text>
+    </g>
+
+    <g transform="translate(650 44)" filter="url(#shadow)">
+      <rect width="486" height="542" rx="24" fill="#f6f8fa" stroke="#6e7681" stroke-width="2"/>
+      <rect width="486" height="54" rx="24" fill="#161b22"/>
+      <circle cx="28" cy="27" r="7" fill="#ff5f57"/>
+      <circle cx="51" cy="27" r="7" fill="#febc2e"/>
+      <circle cx="74" cy="27" r="7" fill="#28c840"/>
+
+      <rect x="24" y="78" width="54" height="54" rx="13" fill="#0d1117"/>
+      <path d="M34 105 H44 L49 90 L56 119 L63 101 H70" fill="none" stroke="url(#pulse)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="96" y="101" fill="#0d1117" font-size="27" font-weight="800">GitHub Repo Pulse</text>
+      <text x="96" y="126" fill="#57606a" font-size="17">Your daily digest</text>
+
+      <text x="28" y="177" fill="#24292f" font-size="19" font-weight="700">New followers</text>
+      <rect x="188" y="151" width="266" height="48" rx="12" fill="#eaeef2"/>
+      <text x="210" y="181" fill="#0969da" font-size="18" font-weight="700">@octocat</text>
+
+      <text x="28" y="239" fill="#24292f" font-size="19" font-weight="700">Stars</text>
+      <rect x="188" y="213" width="266" height="62" rx="12" fill="#eaeef2"/>
+      <text x="210" y="239" fill="#24292f" font-size="18" font-weight="700">repo-one</text>
+      <text x="313" y="239" fill="#1a7f37" font-size="18" font-weight="800">+2</text>
+      <text x="210" y="260" fill="#57606a" font-size="14">@person1, @person2</text>
+
+      <text x="28" y="316" fill="#24292f" font-size="19" font-weight="700">Forks</text>
+      <rect x="188" y="290" width="266" height="48" rx="12" fill="#eaeef2"/>
+      <text x="210" y="320" fill="#24292f" font-size="18" font-weight="700">repo-two</text>
+      <text x="309" y="320" fill="#1a7f37" font-size="18" font-weight="800">+1</text>
+
+      <text x="28" y="378" fill="#24292f" font-size="19" font-weight="700">Watchers</text>
+      <rect x="188" y="352" width="266" height="48" rx="12" fill="#eaeef2"/>
+      <text x="210" y="382" fill="#8c959f" font-size="17">No changes</text>
+
+      <line x1="24" y1="422" x2="462" y2="422" stroke="#d0d7de"/>
+      <text x="28" y="455" fill="#24292f" font-size="19" font-weight="800">Current totals</text>
+      <rect x="28" y="470" width="426" height="52" rx="12" fill="#eaeef2"/>
+      <text x="46" y="489" fill="#57606a" font-size="12">Followers</text>
+      <text x="46" y="513" fill="#24292f" font-size="21" font-weight="800">127</text>
+      <text x="151" y="489" fill="#57606a" font-size="12">Stars</text>
+      <text x="151" y="513" fill="#24292f" font-size="21" font-weight="800">46</text>
+      <text x="244" y="489" fill="#57606a" font-size="12">Forks</text>
+      <text x="244" y="513" fill="#24292f" font-size="21" font-weight="800">8</text>
+      <text x="335" y="489" fill="#57606a" font-size="12">Watchers</text>
+      <text x="335" y="513" fill="#24292f" font-size="21" font-weight="800">4</text>
+    </g>
+
+    <text x="64" y="575" fill="#8b949e" font-size="18">What changed on my GitHub while I wasn't looking?</text>
+  </g>
+</svg>
