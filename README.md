@@ -1,5 +1,7 @@
 # GitHub Repo Pulse
 
+![GitHub Repo Pulse social preview](assets/github-repo-pulse-social.svg)
+
 Daily email digests for GitHub followers, stars, forks, watchers, and repository growth.
 
 Built by [Susanna Conway](https://github.com/ohsusannamarie) because GitHub somehow forgot to notify us when people actually engage with our work.
