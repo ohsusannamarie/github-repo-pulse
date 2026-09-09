@@ -2,6 +2,8 @@
 
 Daily email digests for GitHub followers, stars, forks, watchers, and repository growth.
 
+Built by [Susanna Conway](https://github.com/ohsusannamarie) because GitHub somehow forgot to notify us when people actually engage with our work.
+
 GitHub exposes this engagement data through its API, but does not provide a simple built-in notification stream for all of it. GitHub Repo Pulse fills that gap with a lightweight Python script and GitHub Actions workflow.
 
 ## What it tracks
